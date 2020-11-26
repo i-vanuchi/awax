@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    background: linear-gradient(0deg, #000 0%, #470455 50%, #000 100%);
+    background: #000;
     height: 100px;
 }
 .header-container {
@@ -24,7 +24,7 @@ header {
 }
 .logo {
     color: black;
-    background-color: #b939c4;
+    background-color: #ec8d1f;
     font-weight: bold;
     font-size: 22px;
     text-transform: uppercase;
@@ -32,24 +32,23 @@ header {
 
 .menu-area {
     flex: 1;
-}
-.menu-area ul {
     display: flex;
     justify-content: flex-end;
 }
-.menu-area li {
-    margin-left: 10px;
+.menu-area ul {
+    display: flex;
 }
+
 .menu-area li a {
     display: flex;
     align-items: center;
     justify-content: center;
 
     height: 100px;
-    padding: 0 3px;
+    padding: 0 8px;
     
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     color: #FFF;
     text-decoration: none;
     text-transform: uppercase;
@@ -58,5 +57,6 @@ header {
 }
 .menu-area li a:hover,
 .menu-area li.active a {
-    border-bottom: 5px solid #b939c4;
+    border-bottom: 5px solid #ec8d1f;
+    color: #ec8d1f;
 }
