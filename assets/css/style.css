@@ -253,8 +253,34 @@ header {
 }
 
 /* Seção Projetos */
-
+.projects-menu-container {
+    display: flex;
+    justify-content: center;
+    
+}
 .projects .projects-menu {
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 60px;
+    border: 1px solid #cfcfcf;
+    border-radius: 30px;
+    background-color: #ededed;
+}
+
+.projects-menu li {
+    padding: 20px;
+    font-size: 16px;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 5px solid #ededed;
+}
+.projects-menu li:last-child {
+    border-right: none;
+}
+.projects-menu li:hover {
+    border-bottom: 5px solid #b68a59;
+}
+.projects-menu li.active-project {
+    border-bottom: 5px solid #b68a59;
 }
