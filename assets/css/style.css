@@ -328,6 +328,100 @@ header {
     display: block;
 }
 
+/* Seção Our Team */
+
+.bg-team {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../media/bg-city.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bg-team .section-body {
+    padding-bottom: 68px; /* Padding para espaçamento direcionado aos slide-controllers */
+}
+.our-team {
+    max-width: 1140px;
+    overflow: hidden;
+    position: relative;
+}
+.our-team .slide-wrapper {
+    width: 5000px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.our-team .slide {
+    height: 400px;
+    width: 350px;
+    margin: 0 15px;
+    background-color: #FFF;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.our-team .slide img {
+    margin-bottom: 45px;
+}
+.our-team .slide h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.our-team .slide p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 45px;
+}
+.team-social {
+    display: flex;
+}
+.team-social li {
+    margin: 0 3px;
+}
+.team-social a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    text-indent: -10000px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center center;
+    background-image: url(../images/linkedin.png);
+    background-color: #383838;
+} 
+
+
+
+.bg-team .slide-icons {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.bg-team .slide-icons li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #b68a59;
+    border-radius: 8px;
+    text-indent: -10000px;
+}
+.bg-team .slide-icons li:hover {
+    cursor: pointer;
+}
+.bg-team .slide-icons li.active-slide {
+    background-color: #b68a59;
+}
+
+
+
+
 
 
 /* @media (max-width: 818px) {
