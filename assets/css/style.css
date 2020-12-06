@@ -134,7 +134,7 @@ header {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin: 0 5px;
+    margin: 0 4px;
     box-sizing: border-box;
     background-color: transparent;
     border: 2px solid #b68a59;
@@ -153,18 +153,23 @@ header {
 
     Seção About Us
 */
-
 .light {
+    background-color: #FFF;
+    color: #000;
+    padding: 50px 0;
+}
+.grey {
     background-color: #f7f7f7;
     color: #000;
+    padding: 50px 0;
 }
 .dark {
     background-color: #000;
     color: #FFF;
-}
-.section-default {
-    position: relative; /* Elemento posicionado para conter os slider-controls */
     padding: 50px 0;
+}
+.section-slides {
+    padding: 50px 0 68px 0;
 }
 
 .section-title,
@@ -409,16 +414,15 @@ header {
 }
 
 .slide-icons {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
 }
 .slide-icons li {
     display: inline-block;
     width: 16px;
     height: 16px;
-    margin: 0 5px;
+    margin: 0 4px;
     box-sizing: border-box;
     background-color: transparent;
     border: 2px solid #b68a59;
@@ -475,17 +479,14 @@ header {
     background-position: center top;
 }
 
+/* Seção com os logotipos das empresas clientes */
 
-
-
-/* @media (max-width: 818px) {
-    .photos-wrapper div {
-        width: 32%;
-    }
+.companies-logos {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    justify-content: space-between;
 }
-
-@media (max-width: 626px) {
-    .photos-wrapper div {
-        width: 45%;
-    }
-} */
+.companies-logos li img {
+    width: 100%;
+}
