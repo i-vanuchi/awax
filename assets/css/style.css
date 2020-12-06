@@ -153,20 +153,25 @@ header {
 
     Seção About Us
 */
+.light,
+.light-grey,
+.dark {
+    padding: 50px 0;
+}
+
 .light {
     background-color: #FFF;
     color: #000;
-    padding: 50px 0;
+    border-top: 1px solid #d2d2d2;
+    box-shadow: 0 1px 3px #d2d2d2;
 }
-.grey {
+.light-grey {
     background-color: #f7f7f7;
     color: #000;
-    padding: 50px 0;
 }
 .dark {
     background-color: #000;
     color: #FFF;
-    padding: 50px 0;
 }
 .section-slides {
     padding: 50px 0 68px 0;
@@ -193,7 +198,7 @@ header {
     margin-top: 50px;
 }
 
-.about-us {
+.about-us-container {
     display: flex;
 }
 .about-us-left {
@@ -208,29 +213,29 @@ header {
     width: 450px;
     margin-left: 30px;
 }
-.about-us img {
+.about-us-container img {
     width: 100%;
     box-shadow: 0 0 10px #444;
 }
 
 /* Seção Services */
 
-.services ul {
+.services-container ul {
     display: flex;
 }
-.services li:nth-child(1) {
+.services-container li:nth-child(1) {
     background-image: url(../images/medalha.png);
 }
-.services li:nth-child(2) {
+.services-container li:nth-child(2) {
     background-image: url(../images/estrela.png);
 }
-.services li:nth-child(3) {
+.services-container li:nth-child(3) {
     background-image: url(../images/relogio.png);
 }
-.services li:nth-child(4) {
+.services-container li:nth-child(4) {
     background-image: url(../images/balao.png);
 }
-.services li {
+.services-container li {
     flex: 1;
     padding: 15px;
     text-align: center;
@@ -238,10 +243,10 @@ header {
     background-position: center 0;
     border-right: 1px solid #383838;
 }
-.services li:first-child {
+.services-container li:first-child {
     border-left: 1px solid #383838;
 }
-.services h3 {
+.services-container h3 {
     height: 50px;
     margin-top: 80px;
     padding: 0 40px;
@@ -250,7 +255,7 @@ header {
     text-transform: uppercase;
     font-weight: 600;
 }
-.services p {
+.services-container p {
     margin-top: 15px;
     font-size: 13px;
     color: #666;
@@ -264,7 +269,7 @@ header {
     justify-content: center;
     
 }
-.projects .projects-menu {
+.projects-container .projects-menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,6 +291,7 @@ header {
 }
 .projects-menu li:hover {
     border-bottom: 5px solid #b68a59;
+    cursor: pointer;
 }
 .projects-menu li.active-project {
     border-bottom: 5px solid #b68a59;
@@ -344,16 +350,16 @@ header {
 .bg-team .section-body {
     padding-bottom: 68px; /* Padding para espaçamento direcionado aos slide-controllers */
 }
-.our-team {
+.our-team-container {
     max-width: 1140px;
     overflow: hidden;
 }
-.our-team .slide-wrapper {
+.our-team-container .slide-wrapper {
     width: 5000px;
     display: flex;
     flex-wrap: nowrap;
 }
-.our-team .slide {
+.our-team-container .slide {
     height: 400px;
     width: 350px;
     margin: 0 15px;
@@ -364,15 +370,15 @@ header {
     justify-content: center;
     align-items: center;
 }
-.our-team .slide img {
+.our-team-container .slide img {
     margin-bottom: 45px;
 }
-.our-team .slide h3 {
+.our-team-container .slide h3 {
     font-size: 22px;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
-.our-team .slide p {
+.our-team-container .slide p {
     font-size: 14px;
     color: #666;
     margin-bottom: 45px;
@@ -438,16 +444,16 @@ header {
 
 /* Seção Happy Clients */
 
-.happy-clients {
+.happy-clients-container {
     max-width: 1140px;
     overflow: hidden;
 }
-.happy-clients .slide-wrapper {
+.happy-clients-container .slide-wrapper {
     width: 5000px;
     display: flex;
     flex-wrap: nowrap;
 }
-.happy-clients .slide {
+.happy-clients-container .slide {
     width: 1140px;
     padding: 0 150px;
     box-sizing: border-box;
@@ -458,20 +464,21 @@ header {
     text-align: center;
     color: #000;
 }
-.happy-clients .slide img {
+.happy-clients-container .slide img {
     margin-bottom: 45px;
 }
-.happy-clients .slide h3 {
+.happy-clients-container .slide h3 {
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 .client-role {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 45px;
 }
 .client-review {
+    font-size: 14px;
     padding: 50px 0;
     color: #666;
     background-image: url(../images/quote.png);
@@ -481,12 +488,72 @@ header {
 
 /* Seção com os logotipos das empresas clientes */
 
-.companies-logos {
+.awards-container {
     display: flex;
     max-width: 1140px;
     margin: 0 auto;
     justify-content: space-between;
 }
-.companies-logos li img {
+.awards li {
+    display: flex;
+    align-items: center;
+}
+.awards li img {
     width: 100%;
+}
+
+/* Seção Price */
+
+.prices-container {
+    display: flex;
+    justify-content: space-between;
+}
+.price-card {
+    padding: 30px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.price-card h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+.value {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+.value + p {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #AEAEAE;
+    margin-top: 5px;
+}
+.price-features {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.price-features li {
+    padding-top: 10px;
+    font-size: 12px;
+    color: #000;
+}
+.price-features li:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin: 10px auto 0 auto;
+    background-color: #999;
+}
+.price-card .button:hover {
+    background-color: #373737;
+    transform: none;
 }
