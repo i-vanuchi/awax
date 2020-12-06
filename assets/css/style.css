@@ -163,6 +163,7 @@ header {
     color: #FFF;
 }
 .section-default {
+    position: relative; /* Elemento posicionado para conter os slider-controls */
     padding: 50px 0;
 }
 
@@ -334,7 +335,6 @@ header {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../media/bg-city.jpg);
     background-size: cover;
     background-position: center;
-    position: relative;
 }
 .bg-team .section-body {
     padding-bottom: 68px; /* Padding para espaçamento direcionado aos slide-controllers */
@@ -342,7 +342,6 @@ header {
 .our-team {
     max-width: 1140px;
     overflow: hidden;
-    position: relative;
 }
 .our-team .slide-wrapper {
     width: 5000px;
@@ -365,7 +364,6 @@ header {
 }
 .our-team .slide h3 {
     font-size: 22px;
-    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
@@ -387,21 +385,36 @@ header {
     border-radius: 15px;
     text-indent: -10000px;
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: auto 15px;
     background-position: center center;
-    background-image: url(../images/linkedin.png);
-    background-color: #383838;
+    background-color: #bdbdbd;
 } 
+.team-social a:hover {
+    background-color: #b68a59;
+}
+.team-social a[href*="linkedin"] {
+    background-image: url(../images/linkedin.png);
+}
+.team-social a[href*="twitter"] {
+    background-image: url(../images/twitter.png);
+}
+.team-social a[href*="googleplus"] {
+    background-image: url(../images/googleplus.png);
+}
+.team-social a[href*="pinterest"] {
+    background-image: url(../images/pinterest.png);
+}
+.team-social a[href*="facebook"] {
+    background-image: url(../images/facebook.png);
+}
 
-
-
-.bg-team .slide-icons {
+.slide-icons {
     position: absolute;
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
 }
-.bg-team .slide-icons li {
+.slide-icons li {
     display: inline-block;
     width: 16px;
     height: 16px;
@@ -412,14 +425,55 @@ header {
     border-radius: 8px;
     text-indent: -10000px;
 }
-.bg-team .slide-icons li:hover {
+.slide-icons li:hover {
     cursor: pointer;
 }
-.bg-team .slide-icons li.active-slide {
+.slide-icons li.active-slide {
     background-color: #b68a59;
 }
 
+/* Seção Happy Clients */
 
+.happy-clients {
+    max-width: 1140px;
+    overflow: hidden;
+}
+.happy-clients .slide-wrapper {
+    width: 5000px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.happy-clients .slide {
+    width: 1140px;
+    padding: 0 150px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+}
+.happy-clients .slide img {
+    margin-bottom: 45px;
+}
+.happy-clients .slide h3 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.client-role {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 45px;
+}
+.client-review {
+    padding: 50px 0;
+    color: #666;
+    background-image: url(../images/quote.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
 
 
 
